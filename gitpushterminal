@@ -1,0 +1,257 @@
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ pwd
+/c/Syam/DevOps/GIT
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ ls -al
+total 0
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:04 ./
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:05 ../
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ git --version
+git version 2.52.0.windows.1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ git clone https://github.com/syamraghumandala/REPO-1.git
+Cloning into 'REPO-1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ ls -al
+total 0
+drwxr-xr-x 1 syamp 197609 0 Dec  8 10:38 ./
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:05 ../
+drwxr-xr-x 1 syamp 197609 0 Dec  8 10:38 REPO-1/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT
+$ cd REPO-1/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ pwd
+/c/Syam/DevOps/GIT/REPO-1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ ls -al
+total 5
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:38 ./
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:38 ../
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:38 .git/
+-rw-r--r-- 1 syamp 197609 53 Dec  8 10:38 README.md
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ touch s1 s2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ ls -al
+total 5
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:43 ./
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:38 ../
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:41 .git/
+-rw-r--r-- 1 syamp 197609 53 Dec  8 10:38 README.md
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:43 s1
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:43 s2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        s1
+        s2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git add s1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   s1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        s2
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ touch s3 s4 s5
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git add s3 s4
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   s1
+        new file:   s3
+        new file:   s4
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        s2
+        s5
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git add .
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   s1
+        new file:   s2
+        new file:   s3
+        new file:   s4
+        new file:   s5
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git commit -m
+error: switch `m' requires a value
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git commit -m "s1 s2 s3 s4 s5 files are commit at local"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'syamp@Syam.(none)')
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git config --global user.email "syam.nsws@gmail.com"
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git config --global user.name "syamraghumandala"
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git commit -m "s1 s2 s3 s4 s5 files are commit at local"
+[main 0575a5e] s1 s2 s3 s4 s5 files are commit at local
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 s1
+ create mode 100644 s2
+ create mode 100644 s3
+ create mode 100644 s4
+ create mode 100644 s5
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/syamraghumandala/REPO-1.git
+   b211adf..0575a5e  main -> main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ ls -al
+total 9
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:45 ./
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:38 ../
+drwxr-xr-x 1 syamp 197609  0 Dec  8 10:51 .git/
+-rw-r--r-- 1 syamp 197609 53 Dec  8 10:38 README.md
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:43 s1
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:43 s2
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:45 s3
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:45 s4
+-rw-r--r-- 1 syamp 197609  0 Dec  8 10:45 s5
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ echo "this is s1 file which is created at local system">>s1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ cat s1
+this is s1 file which is created at local system
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   s1
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git add s1
+warning: in the working copy of 's1', LF will be replaced by CRLF the next time Git touches it
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   s1
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git commit -m "s1 file was updated"
+[main 1b2adbd] s1 file was updated
+ 1 file changed, 1 insertion(+)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/syamraghumandala/REPO-1.git
+   0575a5e..1b2adbd  main -> main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ vi syamraghumandala
+
