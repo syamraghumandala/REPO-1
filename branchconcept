@@ -1,0 +1,130 @@
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ pwd
+/c/Syam/DevOps/GIT/REPO-1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ ls -al
+total 19
+drwxr-xr-x 1 syamp 197609    0 Dec  8 11:11 ./
+drwxr-xr-x 1 syamp 197609    0 Dec  8 10:38 ../
+drwxr-xr-x 1 syamp 197609    0 Dec  9 09:57 .git/
+-rw-r--r-- 1 syamp 197609   53 Dec  8 10:38 README.md
+-rw-r--r-- 1 syamp 197609 7461 Dec  8 11:11 gitpushterminal
+-rw-r--r-- 1 syamp 197609   49 Dec  8 10:55 s1
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:43 s2
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:45 s3
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:45 s4
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:45 s5
+-rw-r--r-- 1 syamp 197609    0 Dec  8 11:07 satyanarayana
+-rw-r--r-- 1 syamp 197609   50 Dec  8 11:02 syamraghumandala
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ touch r1 r2 r3 r4
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ ls -al
+total 19
+drwxr-xr-x 1 syamp 197609    0 Dec  9 10:01 ./
+drwxr-xr-x 1 syamp 197609    0 Dec  8 10:38 ../
+drwxr-xr-x 1 syamp 197609    0 Dec  9 09:58 .git/
+-rw-r--r-- 1 syamp 197609   53 Dec  8 10:38 README.md
+-rw-r--r-- 1 syamp 197609 7461 Dec  8 11:11 gitpushterminal
+-rw-r--r-- 1 syamp 197609    0 Dec  9 10:01 r1
+-rw-r--r-- 1 syamp 197609    0 Dec  9 10:01 r2
+-rw-r--r-- 1 syamp 197609    0 Dec  9 10:01 r3
+-rw-r--r-- 1 syamp 197609    0 Dec  9 10:01 r4
+-rw-r--r-- 1 syamp 197609   49 Dec  8 10:55 s1
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:43 s2
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:45 s3
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:45 s4
+-rw-r--r-- 1 syamp 197609    0 Dec  8 10:45 s5
+-rw-r--r-- 1 syamp 197609    0 Dec  8 11:07 satyanarayana
+-rw-r--r-- 1 syamp 197609   50 Dec  8 11:02 syamraghumandala
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        r1
+        r2
+        r3
+        r4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git add r1 r3
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   r1
+        new file:   r3
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        r2
+        r4
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git commit -m "r1 and r3 files are commited in local"
+[main 1eb8cc4] r1 and r3 files are commited in local
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 r1
+ create mode 100644 r3
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git log --oneline
+1eb8cc4 (HEAD -> main) r1 and r3 files are commited in local
+648b753 (origin/main, origin/HEAD) gitpush terminal
+17b56bb the new file was created
+ff5dacb syamraghumandala file was created
+1b2adbd s1 file was updated
+0575a5e s1 s2 s3 s4 s5 files are commit at local
+b211adf Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        r2
+        r4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 255 bytes | 255.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/syamraghumandala/REPO-1.git
+   648b753..1eb8cc4  main -> main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/GIT/REPO-1 (main)
+$ pwd
+/c/Syam/DevOps/GIT/REPO-1
+
